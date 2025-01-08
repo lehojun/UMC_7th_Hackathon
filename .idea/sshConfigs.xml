@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig host="13.209.153.67" id="241ea2ee-0428-41f8-a62e-667f66d1c648" keyPath="C:\Users\rhemd\OneDrive\바탕 화면\UMC\hojun.pem" port="22" nameFormat="DESCRIPTIVE" username="ubuntu" useOpenSSHConfig="true" />
+    </configs>
+  </component>
+</project>
