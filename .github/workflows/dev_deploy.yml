@@ -26,6 +26,10 @@ jobs:
       - name: Grant execute permission for gradlew  # gradlew 실행 권한 부여
         run: chmod +x ./spring/gradlew
 
+      - name: init with Gradle
+        uses: gradle/gradle-build-action@v2
+      - run: gradle init
+
       - name: Build with Gradle  # Gradle을 사용하여 프로젝트 빌드
         uses: gradle/gradle-build-action@v2
         with:
