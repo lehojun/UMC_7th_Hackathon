@@ -3,7 +3,7 @@ name: deploy
 on:
   push:
     branches:
-      - main
+      - master
   workflow_dispatch:
 
 jobs:
@@ -21,7 +21,7 @@ jobs:
           port: 22
           script: |
             cd /home/ubuntu/UMC_7th_Hackathon
-            git pull origin main
+            git pull origin master
             cd spring/src/resources
             echo "${{ secrets.APPLICATION_YML }}" > ./application.yml
 
