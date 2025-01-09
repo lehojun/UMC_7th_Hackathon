@@ -29,13 +29,14 @@ jobs:
       - name: Build with Gradle  # Gradle을 사용하여 프로젝트 빌드
         uses: gradle/gradle-build-action@v2
         with:
+          path: ./spring
           arguments: build
 
       - name: Upload build artifact  # 빌드된 아티팩트 업로드
         uses: actions/upload-artifact@v3
         with:
           name: umc7thServer
-          path: build/libs/*.jar
+          path: ./spring/build/libs/*.jar
 
   deploy:
     needs: build  # build 작업이 성공적으로 완료된 후 실행
@@ -46,7 +47,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: UMC_Hackathon
-          path: build/libs/
+          path: ./spring/build/libs/
 
       - name: Deploy to EC2  # EC2에 배포
         env:
